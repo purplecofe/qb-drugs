@@ -7,13 +7,18 @@ version '1.0.0'
 shared_scripts {
     'config.lua',
     '@qb-core/shared/locale.lua',
-    'locales/en.lua' -- Change this to your preferred language
+    'locales/zh.lua' -- Change this to your preferred language
 }
 
 client_scripts {
     'client/main.lua',
     'client/deliveries.lua',
-    'client/cornerselling.lua'
+    'client/cornerselling.lua',
+    '@PolyZone/client.lua',
+    '@PolyZone/BoxZone.lua',
+    '@PolyZone/EntityZone.lua',
+    '@PolyZone/CircleZone.lua',
+    '@PolyZone/ComboZone.lua',
 }
 
 server_scripts {

@@ -34,7 +34,7 @@ RegisterNetEvent('qb-drugs:server:sellCornerDrugs', function(item, amount, price
             TriggerClientEvent('QBCore:Notify', src, Lang:t("success.offer_accepted"), 'success')
             Player.Functions.RemoveItem(item, amount)
             Player.Functions.AddMoney('cash', price, "sold-cornerdrugs")
-            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "remove")
+            TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "remove", amount)
             for i = 1, #Config.CornerSellingDrugsList, 1 do
                 local item = Player.Functions.GetItemByName(Config.CornerSellingDrugsList[i])
 
@@ -59,7 +59,7 @@ RegisterNetEvent('qb-drugs:server:robCornerDrugs', function(item, amount, price)
     if Player then
         local AvailableDrugs = {}
         Player.Functions.RemoveItem(item, amount)
-        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "remove")
+        TriggerClientEvent('inventory:client:ItemBox', src, QBCore.Shared.Items[item], "remove", amount)
         for i = 1, #Config.CornerSellingDrugsList, 1 do
             item = Player.Functions.GetItemByName(Config.CornerSellingDrugsList[i])
             if item then
