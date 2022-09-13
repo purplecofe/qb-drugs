@@ -199,7 +199,7 @@ local function SellToPed(ped)
                             if succesChance <= 10 then
                                 hasTarget = false
                                 if math.random(0, 1) == 1 then
-                                    exports["qb-dispatch"]:DrugSale()
+                                    exports["ps-dispatch"]:DrugSale()
                                 end
                                 QBCore.Functions.Notify('顯然這筆交易破局了', 'error', 3000)
                                 ClearPedTasks(PlayerPedId())
@@ -210,7 +210,7 @@ local function SellToPed(ped)
                                 lastPed[#lastPed + 1] = ped
                             elseif succesChance > 10 then
                                 if math.random(0, 1) == 1 then
-                                    exports["qb-dispatch"]:DrugSale()
+                                    exports["ps-dispatch"]:DrugSale()
                                 end
                                 TriggerServerEvent('qb-drugs:server:sellCornerDrugs', availableDrugs[drugType].item, bagAmount, randomPrice)
                                 hasTarget = false
@@ -371,4 +371,7 @@ CreateThread(function()
             toFarAway()
         end
     end)
+end)
+exports("cornerselling", function()
+    return cornerselling
 end)

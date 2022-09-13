@@ -105,7 +105,13 @@ Config.CornerSellingDrugsList = {
     "weed_ak47",
     "crack_baggy",
     "cokebaggy",
-    "meth"
+    "meth",
+    "meth_baggy",
+    "coke_baggy",
+    "weed_baggy",
+    "marijuana_3.5_high",
+    "marijuana_3.5_mid",
+    "marijuana_3.5_low",
 }
 
 Config.DrugsPrice = {
@@ -144,6 +150,30 @@ Config.DrugsPrice = {
     ["meth"] = {
         min = 18,
         max = 40,
+    },
+    ["meth_baggy"] = {
+        min = 18,
+        max = 40,
+    },
+    ["coke_baggy"] = {
+        min = 18,
+        max = 40,
+    },
+    ["weed_baggy"] = {
+        min = 18,
+        max = 40,
+    },
+    ["marijuana_3.5_high"] = {
+        min = 34,
+        max = 40,
+    },
+    ["marijuana_3.5_mid"] = {
+        min = 28,
+        max = 34,
+    },
+    ["marijuana_3.5_low"] = {
+        min = 15,
+        max = 24,
     },
 }
 
